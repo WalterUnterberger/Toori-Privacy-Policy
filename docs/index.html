@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toori Legal Information</title>
+    <style>
+        :root {
+            --text: #1f1f1f;
+            --muted: #5f6368;
+            --background: #ffffff;
+            --surface: #f7f7f8;
+            --border: #dddddd;
+            --primary: #005fcc;
+            --primary-hover: #004a99;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 32px 20px;
+            line-height: 1.7;
+            color: var(--text);
+            background-color: var(--background);
+        }
+
+        header {
+            margin-bottom: 32px;
+        }
+
+        h1, h2, h3 {
+            color: var(--text);
+            line-height: 1.25;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin: 0 0 16px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        a:hover,
+        a:focus {
+            color: var(--primary-hover);
+        }
+
+        a:focus {
+            outline: 3px solid rgba(0, 95, 204, 0.35);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+
+        .meta {
+            color: var(--muted);
+            margin-top: 12px;
+        }
+
+        .meta p {
+            margin-bottom: 4px;
+        }
+
+        .intro {
+            font-size: 1.05rem;
+            max-width: 760px;
+        }
+
+        nav {
+            margin: 32px 0;
+            padding: 20px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background-color: var(--surface);
+        }
+
+        nav h2 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+
+        .nav-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-list a {
+            display: block;
+            padding: 14px 16px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: var(--background);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-list span {
+            display: block;
+            margin-top: 4px;
+            color: var(--muted);
+            font-weight: 400;
+            font-size: 0.92rem;
+        }
+
+        .section {
+            margin-bottom: 32px;
+            padding: 24px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background-color: var(--background);
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 24px 16px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Toori Legal Information</h1>
+
+    <p class="intro">
+        This page provides official legal, privacy, account deletion, and licensed data information
+        for Toori, an educational Android application for learning Japanese.
+    </p>
+
+    <div class="meta" aria-label="Page information">
+        <p><strong>Last updated:</strong> May 25, 2026</p>
+        <p><strong>App name:</strong> Toori</p>
+        <p><strong>Developer:</strong> Walter Unterberger</p>
+    </div>
+</header>
+
+<nav aria-labelledby="navigation-title">
+    <h2 id="navigation-title">Available Information</h2>
+
+    <ul class="nav-list">
+        <li>
+            <a href="privacy-policy.html">
+                Privacy Policy
+                <span>How Toori collects, uses, stores, and protects user information.</span>
+            </a>
+        </li>
+        <li>
+            <a href="account-deletion.html">
+                Account Deletion
+                <span>How users can delete their Toori account and associated data.</span>
+            </a>
+        </li>
+        <li>
+            <a href="licensed-data.html">
+                Licensed Data
+                <span>Attribution, licenses, and access for externally licensed datasets.</span>
+            </a>
+        </li>
+        <li>
+            <a href="#contact">
+                Contact
+                <span>Contact information for privacy, deletion, and licensing questions.</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<main>
+    <section class="section" aria-labelledby="about-title">
+        <h2 id="about-title">About Toori</h2>
+        <p>
+            Toori is a Japanese language learning application focused on kana, kanji,
+            vocabulary study, dictionary functionality, and learning progress tracking.
+        </p>
+        <p>
+            This site exists to make Toori's privacy practices, account deletion process,
+            and third-party licensing obligations publicly accessible.
+        </p>
+    </section>
+
+    <section class="section" aria-labelledby="scope-title">
+        <h2 id="scope-title">Repository Scope</h2>
+        <p>
+            This public site is used for legal and compliance information only.
+            It does not contain the Toori application source code.
+        </p>
+        <p>
+            Where required, this site may provide access to adapted third-party datasets
+            used by Toori under their respective license terms.
+        </p>
+    </section>
+
+    <section id="contact" class="section" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <p>
+            For questions about privacy, account deletion, licensed data, or legal information,
+            please contact:
+        </p>
+        <p>
+            <strong>Walter Unterberger</strong><br>
+            <a href="mailto:w.unterberger.dev@gmail.com">w.unterberger.dev@gmail.com</a>
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>Toori is operated by Walter Unterberger.</p>
+</footer>
+
+</body>
+</html>
