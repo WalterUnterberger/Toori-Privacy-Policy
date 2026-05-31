@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toori Licensed Data</title>
+
     <style>
         :root {
             --text: #1f1f1f;
@@ -115,6 +116,13 @@
             font-weight: 700;
         }
 
+        .notice {
+            border-left: 4px solid var(--primary);
+            padding: 14px 18px;
+            margin: 24px 0;
+            background-color: var(--surface);
+        }
+
         footer {
             margin-top: 48px;
             padding-top: 24px;
@@ -142,6 +150,7 @@
         }
     </style>
 </head>
+
 <body>
 
 <a class="back-link" href="index.html">← Back to Legal Information</a>
@@ -150,7 +159,7 @@
     <h1>Toori Licensed Data</h1>
 
     <div class="meta">
-        <p><strong>Last updated:</strong> May 25, 2026</p>
+        <p><strong>Last updated:</strong> May 31, 2026</p>
         <p><strong>App name:</strong> Toori</p>
         <p><strong>Developer:</strong> Walter Unterberger</p>
     </div>
@@ -159,14 +168,66 @@
 <main class="card">
 
     <h2>Overview</h2>
+
     <p>
         This page documents externally licensed datasets used by Toori and provides
-        attribution, licensing details, and access where required.
+        attribution, licensing details, modification notes, and public access where required.
     </p>
+
     <p>
-        Some Japanese language data used in Toori may be derived from third-party datasets.
+        Toori uses Japanese language data derived from third-party linguistic datasets.
         Such data remains subject to the license terms of the original providers.
     </p>
+
+    <div class="notice">
+        <p>
+            Some databases distributed by Toori contain adapted data licensed under
+            Creative Commons Attribution-ShareAlike 4.0 International.
+            Those adapted databases are made publicly available under the same license.
+        </p>
+    </div>
+
+    <h2>Downloadable Databases</h2>
+
+    <section class="dataset-box" aria-labelledby="vocabulary-download-title">
+        <h3 id="vocabulary-download-title">Toori Vocabulary Corpus Database</h3>
+
+        <p>
+            This SQLite database contains vocabulary and dictionary data derived from JMdict.
+        </p>
+
+        <ul>
+            <li><strong>File:</strong> Toori_vocabulary_corpus.db.zip</li>
+            <li><strong>Derived from:</strong> JMdict / JMdictDB</li>
+            <li><strong>License:</strong> CC BY-SA 4.0</li>
+        </ul>
+
+        <p>
+            <a class="download-link" href="datasets/Toori_vocabulary_corpus.db.zip">
+                Download Toori Vocabulary Corpus Database
+            </a>
+        </p>
+    </section>
+
+    <section class="dataset-box" aria-labelledby="kanji-download-title">
+        <h3 id="kanji-download-title">Toori Kanji Corpus Database</h3>
+
+        <p>
+            This SQLite database contains kanji information derived from KANJIDIC2.
+        </p>
+
+        <ul>
+            <li><strong>File:</strong> Toori_kanji_corpus.db.zip</li>
+            <li><strong>Derived from:</strong> KANJIDIC2</li>
+            <li><strong>License:</strong> CC BY-SA 4.0</li>
+        </ul>
+
+        <p>
+            <a class="download-link" href="datasets/Toori_kanji_corpus.db.zip">
+                Download Toori Kanji Corpus Database
+            </a>
+        </p>
+    </section>
 
     <h2>JMdict / JMdictDB</h2>
 
@@ -174,7 +235,7 @@
         <h3 id="jmdict-title">Japanese Dictionary Data</h3>
 
         <p>
-            Japanese dictionary data used in Toori may be derived from <strong>JMdict</strong>,
+            Japanese dictionary data used in Toori is derived from <strong>JMdict</strong>,
             provided by the <strong>Electronic Dictionary Research and Development Group (EDRDG)</strong>.
         </p>
 
@@ -182,6 +243,7 @@
             <li><strong>Dataset:</strong> JMdict / JMdictDB</li>
             <li><strong>Provider:</strong> Electronic Dictionary Research and Development Group</li>
             <li><strong>License:</strong> Creative Commons Attribution-ShareAlike 4.0 International</li>
+            <li><strong>Copyright:</strong> Electronic Dictionary Research and Development Group</li>
         </ul>
 
         <p>
@@ -198,34 +260,40 @@
             </a>
         </p>
 
-        <p>
-            Data used in Toori may have been parsed, filtered, normalized, restructured,
-            or converted into SQLite database format for application use.
-        </p>
+        <h3>Modifications</h3>
 
-        <p>
-            Public adapted dataset:
-            <br>
-            <a class="download-link" href="datasets/jmdict_dictionary.db">
-                Download Toori JMdict-derived dictionary database
-            </a>
-        </p>
+        <ul>
+            <li>Parsed and converted source data into SQLite database format</li>
+            <li>Normalized data structures for application use</li>
+            <li>Added internal identifiers</li>
+            <li>Added source provenance metadata</li>
+            <li>Added Toori-specific indexing and application metadata</li>
+        </ul>
     </section>
 
-    <h2>KANJIDIC2 / KRADFILE / RADKFILE</h2>
+    <h2>KANJIDIC2</h2>
 
-    <section class="dataset-box" aria-labelledby="kanji-data-title">
-        <h3 id="kanji-data-title">Kanji and Radical Data</h3>
+    <section class="dataset-box" aria-labelledby="kanjidic-title">
+        <h3 id="kanjidic-title">Kanji Data</h3>
 
         <p>
-            Toori may also use kanji and radical data provided by the
-            <strong>Electronic Dictionary Research and Development Group (EDRDG)</strong>.
+            Kanji data used in Toori is derived from <strong>KANJIDIC2</strong>,
+            provided by the <strong>Electronic Dictionary Research and Development Group (EDRDG)</strong>.
         </p>
 
         <ul>
-            <li><strong>Datasets:</strong> KANJIDIC2 / KRADFILE / RADKFILE</li>
+            <li><strong>Dataset:</strong> KANJIDIC2</li>
+            <li><strong>Provider:</strong> Electronic Dictionary Research and Development Group</li>
             <li><strong>License:</strong> Creative Commons Attribution-ShareAlike 4.0 International</li>
+            <li><strong>Copyright:</strong> Electronic Dictionary Research and Development Group</li>
         </ul>
+
+        <p>
+            Original source:
+            <a href="https://www.edrdg.org/wiki/index.php/KANJIDIC_Project" target="_blank" rel="noopener noreferrer">
+                KANJIDIC Project
+            </a>
+        </p>
 
         <p>
             License details:
@@ -233,7 +301,31 @@
                 EDRDG License Page
             </a>
         </p>
+
+        <h3>Modifications</h3>
+
+        <ul>
+            <li>Parsed and converted source data into SQLite database format</li>
+            <li>Normalized kanji, reading, and meaning records</li>
+            <li>Added internal identifiers</li>
+            <li>Added source provenance metadata</li>
+            <li>Added Toori-specific classification and indexing metadata</li>
+        </ul>
     </section>
+
+    <h2>License</h2>
+
+    <p>
+        The JMdict-derived and KANJIDIC2-derived databases made available on this page
+        are distributed under the Creative Commons Attribution-ShareAlike 4.0 International License.
+    </p>
+
+    <p>
+        License text:
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">
+            Creative Commons Attribution-ShareAlike 4.0 International
+        </a>
+    </p>
 
     <h2>Related Information</h2>
 
@@ -246,7 +338,8 @@
 </main>
 
 <footer>
-    <p>Toori is operated by Walter Unterberger.</p>
+    <p>© 2026 Walter Unterberger</p>
+    <p>Toori Legal Information Portal</p>
 </footer>
 
 </body>
